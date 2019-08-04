@@ -188,6 +188,7 @@ nav ul li a:hover::after {
     list-style-type: none;
     font-size: 2em;
     right: 12.5px;
+    z-index: 2;
     transform: translate(-10%, -50%);
 }
 
@@ -261,7 +262,7 @@ nav ul li a:hover::after {
 
 #my_story {
     background-color: rgb(245, 245, 245);
-    height: 900px;
+    height: auto;
     /* padding: 200px 200px 50px 200px; */
 }
 
@@ -273,17 +274,24 @@ nav ul li a:hover::after {
     font-size: 6em;
     font-family: 'Orbitron', sans-serif;
     color:  rgb(202, 173, 184);
-    padding: 150px 200px 10px 200px;
+    /* padding: 150px 200px 10px 200px; */
+}
+
+.padding_story {
+    padding: 6%;
 }
 
 #technology {
-    padding-top: 10px;
-    padding-left: 200px;
+    /* padding-top: 10px; */
+    padding-bottom: 20px;
+    /* padding-left: 200px; */
 }
 
 #about_me {
-    padding: 210px 200px 50px 75px;
+    /* padding: 210px 200px 50px 75px; */
     font-size: 1.3em;
+    padding-top: 3.5%;
+    padding-left: 6%;
 }
 
 #skill_set {
@@ -302,7 +310,7 @@ nav ul li a:hover::after {
 }
 
 .progress {
-    margin: 30px;
+    margin: 50px;
 }
 
 /* ----Start of Media Queries for Small and Large Screens------ */
@@ -339,7 +347,7 @@ nav ul li a:hover::after {
 
     @media (max-width: 978px) {
         body {
-            padding: 0;
+            padding: 10px;
             height: 100vh;
         }
 
