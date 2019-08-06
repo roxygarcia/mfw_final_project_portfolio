@@ -36,6 +36,12 @@ body {
     border-color: transparent;
 }
 
+    /* Changing color of active navbar button during scrollspy */
+li.active a { 
+    color: rgb(87, 87, 87) !important; background: rgb(197, 156, 163, .5) !important;
+    transition: .3s;
+}
+
 .navbar-default .navbar-nav > li > a {
     color: rgb(78, 78, 78);
     text-shadow: 1px 1px 2px #ffffff;
@@ -50,50 +56,6 @@ body {
     animation: slideIn .5s forwards;
     transition: .5s;
 }
-
-/* --------2nd Navbar Code---------- */
-/* .navbar_list {
-    list-style-type: none;
-}
-
-.navbar_list li a, .brand a {
-text-decoration: none;
-}
-
-.container_ {
-    margin: 0 auto;
-}
-
-#navbar {
-    font-family: 'Orbitron', sans-serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-transform: uppercase;
-    font-size: 1.1em;
-}
-
-.brand {
-    font-size: 2em;
-    font-weight: 300;
-    transform: translateX(-100rem);
-    animation: slideIn .5s forwards;
-    padding: 10px;
-}
-
-.brand a {
-    color: rgb(128, 128, 128);
-}
-
-.brand span {
-    color: crimson;
-}
-
-nav ul {
-    display: flex;
-} */
-
-/* ---------End of 2nd Navbar--------------- */
 
         /* Start of navbar slide in animation */
 nav ul li {
@@ -180,6 +142,29 @@ nav ul li a:hover::after {
 
 
 /*----------- Start of Social Media Icons -------------------*/
+
+
+        /* Social list in collapsed navbar */
+.socials_list_collapsed {
+    padding: 0;
+}
+
+.social_item {
+    list-style-type: none;
+    float: left;
+    margin-right: 25px;
+}
+
+.icon_collapsed {
+    color: rgb(128, 128, 128);
+}
+
+.icon_collapsed:hover {
+    color: rgb(49, 49, 49);
+    font-size: 1.3em;
+    transition: .5s;
+}
+        /* End of social list in collapsed navbar */
 
 .socials_list {
     margin: 0;
@@ -321,6 +306,10 @@ nav ul li a:hover::after {
 
 }
 
+#port_sent, #h2_contact {
+    font-size: 2.1em;
+}
+
 .padding_portfolio {
     padding: 7% 7% 3% 7%;
 }
@@ -334,7 +323,7 @@ nav ul li a:hover::after {
 }
 
 img {
-    filter: blur(5px);
+    filter: blur(6px);
     opacity: .5;
     transition: all 2s;
 }
@@ -350,7 +339,7 @@ img:hover {
 .img_size {
     margin: 0 auto;
   /* width: 230px; */
-  height: 400px;
+  height: 500px;
 }
 
 .bgc {
@@ -405,7 +394,7 @@ img:hover {
 }
 
 #contact_form h3 {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .border {
@@ -465,11 +454,13 @@ input {
 }
 
 
-
-
 /* ----Start of Media Queries for Small and Large Screens------ */
 
 @media (max-width: 800px) {
+    .socials_list {
+        display: none;
+    }
+
     nav ul {
         flex-direction: column;
     }
@@ -498,6 +489,13 @@ input {
         text-shadow: 0 0 10px rgba(206, 174, 174, 0.5);
     }
 }
+    @media (min-width: 740px) {
+        .socials_list_collapsed {
+            display: none;
+        }
+
+    }
+
 
     @media (max-width: 978px) {
         body {
@@ -526,6 +524,10 @@ input {
 
             /* Medium Screens */
     @media (min-width: 1400px) {
+        .socials_list_collapsed {
+            display: none;
+        }
+
         #intro h1 {
             font-size: 6em;
             letter-spacing: 13px;
@@ -544,6 +546,10 @@ input {
             /* Large Screens */
 
     @media (min-width: 1900px) {
+        .socials_list_collapsed {
+            display: none;
+        }
+
         #intro h1 {
             font-size: 9em;
             letter-spacing: 13px;

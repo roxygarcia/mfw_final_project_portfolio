@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
     <!--Start of Nav Section  -->
 
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -27,32 +27,44 @@
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="nav navbar-nav navbar-right">
+                <ul id="navbar_list" class="nav navbar-nav navbar-right">
                     <!-- <li class="active">
                         <a href="#">Home <span class="sr-only">(current)</span>
                         </a>
                     </li> -->
-                    <li><a href="#my_story">About</a></li>
-                    <li><a href="#my_projects">Projects</a></li>
-                    <li><a href="#contact_form">Contact</a></li>
+                    <li class="nav_item"><a href="#my_story">About</a></li>
+                    <li class="nav_item"><a href="#my_projects">Projects</a></li>
+                    <li class="nav_item"><a href="#contact_form">Contact</a></li>
+                </ul>
+                <ul class="socials_list_collapsed">
+                    <li class="social_item">
+                        <a class="social" href="#" target="_blank" rel="external">
+                            <i class="icon_collapsed fab fa-github"></i>
+                            <span class="hidden-xs"></span>
+                        </a>
+                    </li>
+                    <li class="social_item">
+                        <a class="social" href="#" target="_blank" rel="external">
+                            <i class="icon_collapsed fab fa-twitter"></i>
+                            <span class="hidden-xs"></span><br class="hidden-xs">
+                        </a>
+                    </li>
+                    <li class="social_item">
+                        <a class="social" href="#" target="_blank" rel="external">
+                            <i class="icon_collapsed fab fa-instagram"></i>
+                            <span class="hidden-xs"></span>
+                        </a>
+                    </li>
+                    <li class="social_item">
+                        <a class="social" href="#" target="_blank" rel="external">
+                            <i class="icon_collapsed fab fa-linkedin"></i>
+                            <span class="hidden-xs"></span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <!-- <header>
-        <div class="container_">
-            <nav id="navbar">
-                <h3 class="brand"><a href=""><span>Roxy </span>Garcia</a></h3>
-                <ul class="navbar_list">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header> -->
 
     <!-- End of Nav Section -->
 
@@ -60,8 +72,8 @@
     <ul class="socials_list">
         <li>
             <a class="social" href="#" target="_blank" rel="external">
-                <i class="icon fab fa-facebook"></i>
-                <span class="hidden-xs"></span><br class="hidden-xs">
+                <i class="icon fab fa-github"></i>
+                <span class="hidden-xs"></span>
             </a>
         </li>
         <li>
@@ -97,18 +109,6 @@
         </div>
     </div>
 
-    <!-- <div id="intro" class="container-fluid">
-            <div class="row page-header">
-                <div class="col-xs-6 col-md-6 bgc1 center">
-                    <h1>A <br> Developer</h1>
-                </div>     
-                <div class="col-xs-6 col-md-6 bgc2">
-                    <h2 class="text-right">In the Making</h2>
-                </div>
-            </div>
-        </div> -->
-
-
     <!-- End of Intro -->
 
     <div id="hero_img" class="container-fluid img-responsive">
@@ -127,7 +127,7 @@
                     <span>Me</span>
                 </h3>
                 <div id="technology">
-                    <h2>I love the world of technology<strong>.</strong></h2>
+                    <h2>I love technology<strong>.</strong></h2>
                 </div>
             </div>
             <div id="about_me" class="col-md-6 col-xs-12 text-left">
@@ -173,17 +173,17 @@
         <div class="padding_portfolio">
     <div class="row">
         <h2 class="col-md-4 col-md-offset-1 col-xs-12 text-left"> 
-            <span>Portfolio</span>
+            <span>My <br> Work</span>
         </h2>
         </div>
         <div class="row">
-            <h3 id="port_sent" class="col-md-7 col-md-offset-1 col-xs-12" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, in?</h3>
+            <h3 id="port_sent" class="col-md-7 col-md-offset-1 col-xs-12" >Design is thinking made visual.</h3>
         </div>
     </div>
     
         <section class="proj_list">
             <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12 proj_item">
+                <div class="col-md-6 col-sm-6 col-xs-12 proj_item">
                     <a href="#" target="_blank">
                         <img class="img_size img-responsive" src="img/toy_story_2.PNG" alt="toy story site"></a>
                     <div class="inner_content">
@@ -197,7 +197,7 @@
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 proj_item">
+                <div class="col-md-6 col-xs-12 proj_item">
                     <a href="#" target="_blank">
                         <img class="img_size img-responsive" src="img/pet_store.PNG" alt="pet store site"></a>
                     <div class="inner_content">
@@ -211,7 +211,10 @@
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 proj_item">
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-xs-12 proj_item">
                     <a href="#" target="_blank">
                         <img class="img_size img-responsive" src="img/restaurante.PNG" alt="restaurante site"></a>
                     <div class="inner_content">
@@ -225,9 +228,24 @@
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
+                <div class="col-md-6 col-xs-12 proj_item bgc">
+                    <a href="#" target="_blank">
+                        <img class="img_size img-responsive" src="#" alt=""></a>
+                    <div class="inner_content">
+                        <div class="site_info">
+                            <span>Site</span>
+                            <h3>Coming Soon</h3>
+                        </div>
+                        <p>
+                                <br>
+                                <!-- <br> -->
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
             </div>
+
             <div class="row">
-                <div class="col-md-4 col-xs-12 proj_item bgc">
+                <div class="col-md-6 col-xs-12 proj_item bgc">
                     <a href="#" target="_blank">
                         <img class="img_size img-responsive" src="#" alt=""></a>
                     <div class="inner_content">
@@ -241,21 +259,7 @@
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 proj_item bgc">
-                    <a href="#" target="_blank">
-                        <img class="img_size img-responsive" src="#" alt=""></a>
-                    <div class="inner_content">
-                        <div class="site_info">
-                            <span>Site</span>
-                            <h3>Coming Soon</h3>
-                        </div>
-                        <p>
-                                <br>
-                                <!-- <br> -->
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-xs-12 proj_item bgc">
+                <div class="col-md-6 col-xs-12 proj_item bgc">
                     <a href="#" target="_blank">
                         <img class="img_size img-responsive" src="#" alt=""></a>
                     <div class="inner_content">
@@ -276,7 +280,7 @@
     <!-- Start of Contact Me Form -->
 
     <div id="contact_form">
-        <h2>Contact Me</h2>
+        <h2 id="h2_contact">Contact Me</h2>
         <h3>Let's work together</h3>
         <div class="border"></div>
         <form class="contact-form" action="" method="post">
