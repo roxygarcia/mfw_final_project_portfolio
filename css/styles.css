@@ -1,10 +1,73 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster+Two|Orbitron|Petit+Formal+Script|Roboto+Mono|Saira+Stencil+One|Syncopate&display=swap');
 
+html {
+    height: 100%;
+    overflow: hidden;
+    perspective: 1px;
+}
+
 body {
     width: 100%;
     margin: 0 auto;
-    padding: 70px;
+    padding: 0 70px;
     overflow-x: hidden;
+    /* perspective: 1px; */
+    transform-style: preserve-3d;
+    overflow-y: scroll;
+    height: 100%;
+    
+}
+
+#main_intro {
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 30vw 0 5vw;
+    position: relative;
+    transform-style: inherit;
+    width: 100%;
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(202, 173, 184);
+}
+
+#main_intro h1 {
+    margin-top: -120px;
+    font-size: 6em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#main_intro h3 {
+    padding-top: 45px;
+    color: #888787;
+    font-size: 2em;
+    text-shadow: 2px 2px rgb(240, 240, 240);
+}
+
+#main_intro, #main_intro:before{
+    background: 20% 80% / cover;
+}
+
+#main_intro::before {
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    background-image: url('../img/chair-contemporary-.jpg');
+    background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
+}
+
+#main_intro * { 
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin: 0;
+    /* padding: 1em 0; */
 }
 
 .container-fluid {
@@ -22,10 +85,11 @@ body {
 
 .navbar {
     padding: 10px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 110px;
+    margin-right: 90px;
     font-family: 'Roboto Mono', sans-serif;
     font-size: 1.2em;
+    z-index: 3;
 }
 
 .nav li a:hover, .navbar-default {
@@ -49,9 +113,9 @@ li.active a {
 
 .navbar-brand {
     font-family: 'Orbitron', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.9em;
     font-weight: 500;
-    letter-spacing: 5px;
+    /* letter-spacing: 5px; */
     transform: translateX(-100rem);
     animation: slideIn .5s forwards;
     transition: .5s;
@@ -168,7 +232,7 @@ nav ul li a:hover::after {
 
 .socials_list {
     margin: 0;
-    padding: 0;
+    padding: 10px;
     position: fixed;
     top: 50%;
     list-style-type: none;
@@ -199,8 +263,7 @@ nav ul li a:hover::after {
 
 /* ---------Start of Intro------------ */
 
-#intro {
-    /* margin: 70px; */
+/* #intro {
     background-image: linear-gradient( to right, rgb(202, 173, 184) 50%, rgb(245, 245, 245) 50%);
     height: 100vh;
     box-shadow: -5px 0 10px -5px rgb(0, 0, 0, .4), 5px 5px 10px -5px rgb(0, 0, 0, .4);
@@ -213,36 +276,22 @@ nav ul li a:hover::after {
     font-size: 7em;
     font-weight: bold;
     font-family: 'Orbitron', sans-serif;
-    /* color: rgb(255, 255, 255); */
     background: linear-gradient(to right, rgb(238, 238, 238) 37%, rgb(202, 173, 184)37%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 1.5;
-}
-
-
-/* .bgc2 {
-    background-color:rgb(209, 209, 209);
-    height: 100vh;
-}
-
-.bgc1 {
-    background-color:rgb(136, 136, 136);
-    height: 100vh;
 } */
 
-#hero_img {
-    background-image: url('../img/close-up-code-coding.jpg');
+/* #hero_img {
+    background-image: url('../img/chair-contemporary-.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     opacity: .8;
     height: 700px;
-}
-
-/* #hero_img:hover {
-    opacity: 1;
 } */
+
+
 
 
 /* ----------------Start of About me Section------------- */
@@ -293,8 +342,154 @@ nav ul li a:hover::after {
 }
 
 .progress {
-    margin: 50px;
+    margin: 70px 110px 140px 110px;
 }
+
+/* -----Hero Img section with web development text content---- */
+
+#hero_img {
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 30vw 0 5vw;
+    position: relative;
+    transform-style: inherit;
+    width: 100%;
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(202, 173, 184);
+}
+
+#hero_img .item {
+    position: absolute;
+}
+
+#hero_img .one {
+    right: 100px;
+    bottom: 250px;
+    /* left: 500px; */
+    font-size: 6em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#hero_img .two {
+    left: 280px;
+    top: 300px;
+    color: #888787;
+    font-size: 4em;
+    opacity: .2;
+}
+
+#hero_img .three {
+    left: 540px;
+    bottom: 100px;
+    font-size: 3.2em;
+    font-weight: bold;
+    opacity: .8;
+}
+
+#hero_img .four {
+    right: 280px;
+    top: 170px;
+    font-size: 2.7em;
+    color: #888787;
+}
+
+#hero_img .five {
+    left: 140px;
+    bottom: 30px;
+    font-size: 2em;
+    color: #888787;
+}
+
+#hero_img .six {
+    left: 680px;
+    bottom: 400px;
+    font-size: 2.5em;
+}
+
+#hero_img .seven {
+    left: 200px;
+    top: 50px;
+    font-size: 2.4em;
+}
+
+#hero_img .eight {
+    right: 200px;
+    top: 270px;
+    font-size: 1.8em;
+    color: #888787;
+    opacity: .6;
+}
+
+#hero_img .nine {
+    right: 100px;
+    bottom: 140px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #888787;
+    opacity: .6;
+}
+
+#hero_img .ten {
+    right: 600px;
+    top: 230px;
+    font-size: 1.5em;
+    font-weight: bold;
+    opacity: .7;
+}
+
+#hero_img .eleven {
+    left: 650px;
+    top: 100px;
+    font-size: 1.8em;
+    color: #888787;
+}
+
+#hero_img .twelve {
+    left: 100px;
+    bottom: 250px;
+    font-size: 2.5em;
+    opacity: .6;
+}
+
+#hero_img .thirteen {
+    right: 568px;
+    bottom: 240px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #888787;
+}
+
+#hero_img, #hero_img:before{
+    background: 70% 30% / cover;
+}
+
+#hero_img::before {
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    background-image: url('../img/chair-contemporary-.jpg');
+    background-size: cover;
+    /* background-position: center center; */
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
+}
+
+#hero_img * { 
+    letter-spacing: 0.2em;
+    margin: 0;
+    /* padding: 1em 0; */
+}
+
+
 
 /* ---------------Start of My Portfolio Section---------- */
 
@@ -333,7 +528,11 @@ img:hover {
 }
 
 .proj_list {
-    padding: 3%;
+    padding: 4%;
+}
+
+#port_sent {
+    padding-bottom: 40px;
 }
 
 .img_size {
@@ -488,7 +687,57 @@ input {
         transition: .2s;
         text-shadow: 0 0 10px rgba(206, 174, 174, 0.5);
     }
+
+    #main_intro h1 {
+        margin-top: 150px;
+        font-size: 3.2em;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    #main_intro h3 {
+        padding-top: 25px;
+        /* background: linear-gradient(to right, rgb(238, 238, 238) 50%, rgb(202, 173, 184)50%); */
+        color: #888787;
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+
+    #hero_img .thirteen {
+        left: 50px;
+        bottom: 200px;
+    }
+
+    #hero_img .one {
+        right: 100px;
+        bottom: 290px;
+        /* left: 500px; */
+        font-size: 5em;
+    }
+
+    #hero_img .ten {
+        right: 60px;
+        top: 230px;
+        font-size: 1.5em;
+        font-weight: bold;
+        opacity: .7;
+    }
+    
+    #hero_img .two {
+        left: 80px;
+        top: 300px;
+        color: #888787;
+        font-size: 4em;
+        opacity: .2;
+    }
+
+    #hero_img .three {
+        display: none;
+    }
 }
+
+
+
     @media (min-width: 740px) {
         .socials_list_collapsed {
             display: none;
@@ -540,6 +789,50 @@ input {
         #intro h1 span {
             letter-spacing: 30px;
             font-size: 1.4em;
+        }
+
+
+        #hero_img .twelve {
+            left: 1000px;
+            top: 450px;
+        }
+
+        #hero_img .thirteen {
+            left: 270px;
+            bottom: 500px;
+        }
+    
+        #hero_img .one {
+            right: 300px;
+            bottom: 490px;
+            /* left: 500px; */
+            font-size: 7em;
+        }
+
+        #hero_img .four {
+            right: 580px;
+            top: 170px;
+            font-size: 2.7em;
+        }
+
+        #hero_img .six {
+            font-size: 4.7em;
+        }
+    
+        #hero_img .ten {
+            right: 60px;
+            top: 230px;
+            font-size: 1.5em;
+            font-weight: bold;
+            opacity: .7;
+        }
+        
+        #hero_img .two {
+            left: 300px;
+            top: 300px;
+            color: #888787;
+            font-size: 4em;
+            opacity: .2;
         }
     }
 
